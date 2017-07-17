@@ -1,0 +1,19 @@
+{
+  "name": "braingames_2017",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tysky/project-lvl1-s116.git"
+  },
+  "author": "Dmitry Tysky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tysky/project-lvl1-s116/issues"
+  },
+  "homepage": "https://github.com/tysky/project-lvl1-s116#readme"
+}
