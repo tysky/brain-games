@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/tysky/project-lvl1-s116/issues"
   },
-  "homepage": "https://github.com/tysky/project-lvl1-s116#readme"
+  "homepage": "https://github.com/tysky/project-lvl1-s116#readme",
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
 }
