@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { askName, guessEvenNumber } from '..';
 
 console.log('Welcome to Brain Games');
