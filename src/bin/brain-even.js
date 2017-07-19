@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-import { askName, guessEvenNumber } from '..';
+import { startGameEvenNumber } from '..';
 
-console.log('Welcome to Brain Games');
-console.log('Answer "yes" if number even otherwise answer "no".\n');
-const name = askName();
-const numberOfRounds = 3;
-guessEvenNumber(name, numberOfRounds);
+// number of game rounds = 3
+startGameEvenNumber(3);
