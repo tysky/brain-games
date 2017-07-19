@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { startGameEvenNumber } from '..';
+import game from '../games/game-even';
 
-// number of game rounds = 3
-startGameEvenNumber(3);
+game();
