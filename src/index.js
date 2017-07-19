@@ -19,5 +19,5 @@ export const guessEvenNumber = (user, number) => {
     return guessEvenNumber(user, number - 1);
   }
   console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-  console.log(`Let's try again, ${user}!`);
+  return console.log(`Let's try again, ${user}!`);
 };
