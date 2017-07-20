@@ -2,16 +2,10 @@ import { cons } from 'hexlet-pairs';
 import { flow } from '..';
 
 const gcd = (a, b) => {
-  if (a > b) {
-    if (a % b === 0) {
-      return b;
-    }
-    return gcd(a - b, b);
-  }
-  if (b % a === 0) {
+  if (b === 0) {
     return a;
   }
-  return gcd(a, b - a);
+  return gcd(b, a % b);
 };
 
 const message = 'Find the greatest common divisor of given numbers.';
