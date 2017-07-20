@@ -35,6 +35,7 @@
     "eslint-plugin-import": "*"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.4",
     "readline-sync": "^1.4.7"
   }
 }
