@@ -49,17 +49,19 @@ const balanceGame = () => {
     if (maxDigit - minDigit <= 1) {
       return sortBalancedNumber(number);
     }
-    let balancedMax = maxDigit;
-    let balancedMin = minDigit;
+    let balancedMax = Number(maxDigit);
+    let balancedMin = Number(minDigit);
     while (balancedMax - balancedMin > 1) {
       balancedMax -= 1;
       balancedMin += 1;
     }
-    const balanced = number.replace(maxDigit, balancedMax).replace(minDigit, balancedMin);
-    return gameLogic(sortBalancedNumber(balanced));
+    const balanced = number.replace(maxDigit,
+          String(balancedMax)).replace(minDigit, String(balancedMin));
+    // const balanced = number.replace(maxDigit, balancedMax).replace(minDigit, balancedMin);
+    return gameLogic(balanced);
   };
   // return gameLogic(randomNumber);
-  return cons(randomNumber, gameLogic(randomNumber));
+  return cons(randomNumber, gameLogic(String(randomNumber)));
 };
 
 export default () => {
