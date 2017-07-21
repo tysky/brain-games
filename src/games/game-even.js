@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { flow } from '..';
+import { playGame } from '..';
 
 const message = 'Answer "yes" if number even otherwise answer "no".';
 const evenGame = () => {
@@ -8,5 +8,5 @@ const evenGame = () => {
   return cons(randomNumber, correctAnswer);
 };
 export default () => {
-  flow(message, evenGame);
+  playGame(message, evenGame);
 };

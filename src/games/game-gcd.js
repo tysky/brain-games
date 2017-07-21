@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { flow } from '..';
+import { playGame } from '..';
 
 const gcd = (a, b) => {
   if (b === 0) {
@@ -19,5 +19,5 @@ const gcdGame = () => {
 };
 
 export default () => {
-  flow(message, gcdGame);
+  playGame(message, gcdGame);
 };

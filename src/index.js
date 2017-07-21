@@ -7,12 +7,12 @@ export const askName = () => {
   return name;
 };
 
-export const flow = (message, game) => {
+export const playGame = (message, game) => {
   console.log('Welcome to Brain Games');
   console.log(message);
   const name = askName();
-  const gameRounds = (user, numberOfRounds) => {
-    if (numberOfRounds === 0) {
+  const playOneRound = (user, numberOfRound) => {
+    if (numberOfRound === 0) {
       return console.log('Congratulations,', user);
     }
     const paramsOfRound = game();
@@ -21,10 +21,10 @@ export const flow = (message, game) => {
     const correctAnswer = cdr(paramsOfRound);
     if (answer === correctAnswer) {
       console.log('Correct!');
-      return gameRounds(user, numberOfRounds - 1);
+      return playOneRound(user, numberOfRound - 1);
     }
     console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
     return console.log(`Let's try again, ${user}!`);
   };
-  return gameRounds(name, 3);
+  return playOneRound(name, 3);
 };
