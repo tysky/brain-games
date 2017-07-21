@@ -36,8 +36,6 @@ const sortBalancedNumber = (number) => {
   return smallestPart + greatestPart;
 };
 
-// sortBalancedNumber('34333444')
-
 const balanceGame = () => {
   const randomNumber = Math.floor(Math.random() * 9990) + 10;
   const gameLogic = (number) => {
@@ -57,10 +55,8 @@ const balanceGame = () => {
     }
     const balanced = number.replace(maxDigit,
           String(balancedMax)).replace(minDigit, String(balancedMin));
-    // const balanced = number.replace(maxDigit, balancedMax).replace(minDigit, balancedMin);
     return gameLogic(balanced);
   };
-  // return gameLogic(randomNumber);
   return cons(randomNumber, gameLogic(String(randomNumber)));
 };
 
