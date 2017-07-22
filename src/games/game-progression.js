@@ -3,22 +3,27 @@ import { playGame } from '..';
 
 const message = 'What number is missing in this progression?';
 
-const progressionGame = () => {
-  const diff = Math.floor(Math.random() * 10);
-  const firstNumber = Math.floor(Math.random() * 10);
-  const place = Math.floor(Math.random() * 8) + 2;
-  // console.log(place);
-  const progression = (startNumber, step) => {
-    const iter = (prev, n) => {
-      if (n === 1) {
-        return prev + step;
-      }
-      return `${prev + step} ${iter(prev + step, n - 1)}`;
-    };
-    return `${iter(startNumber, place - 1)} .. ${iter((startNumber + (place * step)), 10 - place)}`;
+const getMember = (a1, d, n, index) => {
+  if (n === index) {
+    return '..';
+  }
+  return (a1 + (d * (n - 1)));
+};
+const generateProgression = (start, step, index) => {
+  const iter = (member) => {
+    if (member === 10) {
+      return getMember(start, step, member, index);
+    }
+    return `${getMember(start, step, member, index)} ${iter(member + 1)}`;
   };
-  const question = progression(firstNumber, diff);
-  const correctAnswer = String(firstNumber + (place * diff));
+  return iter(1);
+};
+const progressionGame = () => {
+  const step = Math.floor(Math.random() * 10);
+  const startNumber = Math.floor(Math.random() * 10);
+  const index = Math.floor(Math.random() * 10) + 1;
+  const question = generateProgression(startNumber, step, index);
+  const correctAnswer = String(startNumber + ((index - 1) * step));
   return cons(question, correctAnswer);
 };
 
