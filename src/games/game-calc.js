@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { flow } from '..';
+import { playGame } from '..';
 import getRandomNumber from '../generate-random-number';
 
 
@@ -32,5 +32,5 @@ const calcGame = () => {
   return cons(question, correctAnswer);
 };
 export default () => {
-  flow(message, calcGame);
+  playGame(message, calcGame);
 };
