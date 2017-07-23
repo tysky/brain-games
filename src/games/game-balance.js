@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import { playGame } from '..';
+import getRandomNumber from '../generate-random-number';
 
 const message = 'Balance the given number.';
 
@@ -37,7 +38,7 @@ const sortBalancedNumber = (number) => {
 };
 
 const balanceGame = () => {
-  const randomNumber = Math.floor(Math.random() * 9990) + 10;
+  const randomNumber = getRandomNumber(10, 9999);
   const gameLogic = (number) => {
     if (number.length === 1) {
       return number;

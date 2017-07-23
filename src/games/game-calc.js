@@ -1,11 +1,13 @@
 import { cons } from 'hexlet-pairs';
 import { flow } from '..';
+import getRandomNumber from '../generate-random-number';
+
 
 const message = 'What is the result of the expression?';
 const calcGame = () => {
-  const firstOperand = Math.floor(Math.random() * 100);
-  const secondOperand = Math.floor(Math.random() * 100);
-  const randomNumber = Math.floor((Math.random() * 3) + 1);
+  const firstOperand = getRandomNumber(1, 100);
+  const secondOperand = getRandomNumber(1, 100);
+  const randomNumber = getRandomNumber(1, 3);
   let question;
   let correctAnswer;
   switch (randomNumber) {
