@@ -1,6 +1,6 @@
 # brain-games
 [![Maintainability](https://api.codeclimate.com/v1/badges/9a3932500ba444dec742/maintainability)](https://codeclimate.com/github/tysky/brain-games/maintainability)
-[![Build Status](https://travis-ci.org/tysky/project-lvl1-s116.svg?branch=master)](https://travis-ci.org/tysky/project-lvl1-s116)
+[![Build Status](https://travis-ci.org/tysky/brain-games.svg?branch=master)](https://travis-ci.org/tysky/brain-games)
 
 Collection of simple math games.
 
